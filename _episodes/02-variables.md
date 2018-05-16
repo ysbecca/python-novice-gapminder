@@ -300,22 +300,27 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 
 > ## Slicing
 >
-> What does the following program print?
+> 1. What does the following program print?
 >
 > ~~~
 > atom_name = 'carbon'
 > print('atom_name[1:3] is:', atom_name[1:3])
 > ~~~
 > {: .python}
-> ~~~
-> atom_name[1:3] is: ar
-> ~~~
-> {: .output}
 >
-> 1.  What does `thing[low:high]` do?
-> 2.  What does `thing[low:]` (without a value after the colon) do?
-> 3.  What does `thing[:high]` (without a value before the colon) do?
-> 4.  What does `thing[:]` (just a colon) do?
-> 5.  What does `thing[number:negative-number]` do?
-> 6.  What happens when you choose a `high` value which is out of range? (i.e., try `atom_name[0:15]`) 
+> 2.  What does `thing[low:high]` do?
+> 3.  What does `thing[low:]` (without a value after the colon) do?
+> 4.  What does `thing[:high]` (without a value before the colon) do?
+> 5.  What does `thing[:]` (just a colon) do?
+> 6.  What does `thing[number:negative-number]` do?
+> 7.  What happens when you choose a `high` value which is out of range? (i.e., try `atom_name[0:15]`) 
+> > ## Solution
+> > 1. `atom_name[1:3]` is `ar`
+> > 2. `thing[low:high]` will return the string values from position `low` in the string until the position `high - 1`.
+> > 3. `thing[low:]` will return the string values from position `low` until the end of the string. By default, no slice index provided will by default be the end of the string for `high` and the beginning of the string for `low`.
+> > 4. `thing[:high]` will return the string values from the start of the until position `high - 1`.
+> > 5. `thing[:]` returns the entire value of `thing`.
+> > 6. `thing[number:negative-number]` returns the string values from `number` up until the `negative-number`th position counted backwards from the end of the string. If the position of `number` is actually later in the string than the position of `negative-number`, then an empty string is returned.
+> > 7. When the `high` number is greater than the length of the string, string values are returned up until the end of the string. No error is thrown. While this allows code to continue running, you could get unexpected behaviour later in the code if you are not aware of what has happened.
+> {: .solution}
 {: .challenge}
